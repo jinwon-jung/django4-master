@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {# a : Question 객체 리스트 #}
-<h3>설문조사 메인페이지</h3>
+<h3>운동모임 메인페이지</h3>
 <ul>
 	{% for b in a %}
 		<li> <a href="/vote/{{b.id}}/"> {{ b.name }}</a> 생성일 : {{b.pub_date}}
@@ -9,9 +9,9 @@
 		<a href="{% url 'vote:qd' b.id %}">삭제</a></li>
 	{% endfor %}
 	<br>
-	<a href="{% url 'vote:qr' %}">질문 생성하기</a>
+	<a href="{% url 'vote:qr' %}">운동모임 만들기</a>
 	<br>
-	<a href='/vote/cr'>질문의 답 생성하기</a>
+	<a href='/vote/cr'>참,불 여부 만들기</a>
 </ul>
 {% endblock %}
 
